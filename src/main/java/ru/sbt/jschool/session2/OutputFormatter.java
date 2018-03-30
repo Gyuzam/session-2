@@ -54,8 +54,6 @@ public class OutputFormatter {
         for (int i = 0; i < names.length; i++) {
             colnum[i] = names[i].length();
         }
-
-        // SimpleDateFormat
         // secondly each column fills with max length of data
         for (int i = 0; i < data.length; i++) {
             Object[] ob = data[i];
