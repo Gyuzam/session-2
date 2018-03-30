@@ -105,17 +105,15 @@ public class OutputFormatter {
             this.out.print("|");
             Object[] ob = data[i];
             for (int j = 0; j < ob.length; j++) {
-                if (ob[j] == null){
+                if (ob[j] == null) {
                     // if null - find not null in column
-                    for (int k = 0; k < data.length; k++)
-                    {
-                        if (data[k][j] != null){
-                            if (data[k][j] instanceof String){
+                    for (int k = 0; k < data.length; k++) {
+                        if (data[k][j] != null) {
+                            if (data[k][j] instanceof String) {
                                 String format = "%" + -colnum[j] + "s";
                                 this.out.printf(format, "-");
                                 this.out.print("|");
-                            }
-                            else {
+                            } else {
                                 String s = "-";
                                 for (int l = 0; l < colnum[j] - 1; l++) {
                                     s = " " + s;
